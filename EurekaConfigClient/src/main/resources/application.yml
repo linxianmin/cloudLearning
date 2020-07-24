@@ -1,0 +1,23 @@
+server:
+  port: 3302
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka
+  instance:
+    preferIpAddress: true
+data:
+  env: 'default'
+  user:
+    username: 'default'
+    password: 'default'
